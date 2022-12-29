@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<testsuite errors="0" failures="1" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="3" time="70.08">
+    <testcase classname="Test Blog Website Test" name="Each news has an author" time="38.011">
+        <system-out><![CDATA[Given Navigate to website...................................................passed
+And Verify has author.......................................................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="Test Blog Website Test" name="Each news has an image" time="16.468">
+        <system-out><![CDATA[Given Navigate to website...................................................passed
+And Verify has image........................................................passed
+]]></system-out>
+    </testcase>
+    <testcase classname="Test Blog Website Test" name="Article Test" time="15.304">
+        <failure message="stale element reference: element is not attached to the page document&#10;  (Session info: chrome=106.0.5249.91)&#10;For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/stale_element_reference.html&#10;Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'&#10;System info: host: 'NRD5CG5396W33', ip: '192.168.237.106', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '18.0.2'&#10;Driver info: org.openqa.selenium.chrome.ChromeDriver&#10;Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 106.0.5249.91, chrome: {chromedriverVersion: 106.0.5249.61 (511755355844..., userDataDir: C:\Users\basevim\AppData\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:61992}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}&#10;Session ID: 5afee108b5b87f063f2827f7d9257256" type="org.openqa.selenium.StaleElementReferenceException"><![CDATA[Given Navigate to website...................................................passed
+Given Click an article......................................................passed
+And Verify browser title and news title is same.............................passed
+And Verify the links within the news content................................failed
+
+StackTrace:
+org.openqa.selenium.StaleElementReferenceException: stale element reference: element is not attached to the page document
+  (Session info: chrome=106.0.5249.91)
+For documentation on this error, please visit: https://www.seleniumhq.org/exceptions/stale_element_reference.html
+Build info: version: '3.141.59', revision: 'e82be7d358', time: '2018-11-14T08:17:03'
+System info: host: 'NRD5CG5396W33', ip: '192.168.237.106', os.name: 'Windows 10', os.arch: 'amd64', os.version: '10.0', java.version: '18.0.2'
+Driver info: org.openqa.selenium.chrome.ChromeDriver
+Capabilities {acceptInsecureCerts: false, browserName: chrome, browserVersion: 106.0.5249.91, chrome: {chromedriverVersion: 106.0.5249.61 (511755355844..., userDataDir: C:\Users\basevim\AppData\Lo...}, goog:chromeOptions: {debuggerAddress: localhost:61992}, javascriptEnabled: true, networkConnectionEnabled: false, pageLoadStrategy: normal, platform: WINDOWS, platformName: WINDOWS, proxy: Proxy(), setWindowRect: true, strictFileInteractability: false, timeouts: {implicit: 0, pageLoad: 300000, script: 30000}, unhandledPromptBehavior: dismiss and notify, webauthn:extension:credBlob: true, webauthn:extension:largeBlob: true, webauthn:virtualAuthenticators: true}
+Session ID: 5afee108b5b87f063f2827f7d9257256
+	at java.base/jdk.internal.reflect.DirectConstructorHandleAccessor.newInstance(DirectConstructorHandleAccessor.java:67)
+	at java.base/java.lang.reflect.Constructor.newInstanceWithCaller(Constructor.java:499)
+	at java.base/java.lang.reflect.Constructor.newInstance(Constructor.java:483)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.createException(W3CHttpResponseCodec.java:187)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:122)
+	at org.openqa.selenium.remote.http.W3CHttpResponseCodec.decode(W3CHttpResponseCodec.java:49)
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:158)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:83)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:552)
+	at org.openqa.selenium.remote.RemoteWebElement.execute(RemoteWebElement.java:285)
+	at org.openqa.selenium.remote.RemoteWebElement.getAttribute(RemoteWebElement.java:134)
+	at PageOjectModels.BasePage.isBroken(BasePage.java:29)
+	at PageOjectModels.MyHomePage.HasBrokenLinksInArticle(MyHomePage.java:87)
+	at StepDefinitions.TechBlogTestSteps.verify_the_links_within_the_news_content(TechBlogTestSteps.java:50)
+	at ✽.Verify the links within the news content(file:///C:/Users/basevim/IdeaProjects/CucumberProjectE/src/test/java/tech_blog_test.feature:14)
+]]></failure>
+    </testcase>
+</testsuite>
